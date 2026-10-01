@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="EduGenie - Google Gemini powered learning assistant" />
+  <title>EduGenie — AI Learning Assistant</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="hero">
+      <div class="brand">🎓 EduGenie</div>
+      <h1>Learn anything, one clear answer at a time.</h1>
+      <p>Ask questions, simplify concepts, generate quizzes, summarize notes, or build a learning path.</p>
+    </header>
+
+    <section class="card controls" aria-label="EduGenie task form">
+      <label for="task">Choose a task</label>
+      <select id="task">
+        <option value="qa">Ask a Question</option>
+        <option value="explain">Explain a Topic</option>
+        <option value="quiz">Generate Quiz</option>
+        <option value="summarize">Summarize Text</option>
+        <option value="learn">Learning Path</option>
+      </select>
+
+      <label for="inputText">Your input</label>
+      <textarea id="inputText" rows="8" placeholder="Example: Explain the Pythagoras theorem with a simple example."></textarea>
+      <div class="toolbar">
+        <span id="counter">0 / 12000</span>
+        <button id="submitBtn" type="button">✨ Generate</button>
+      </div>
+    </section>
+
+    <section id="status" class="status" role="status" aria-live="polite"></section>
+    <section id="result" class="card result hidden" aria-live="polite"></section>
+
+    <footer>EduGenie • FastAPI + Google Gemini • Built for learning</footer>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>

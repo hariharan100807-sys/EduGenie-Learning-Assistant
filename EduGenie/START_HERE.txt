@@ -1,0 +1,19 @@
+EDUGENIE - QUICK START
+
+1. Open this folder in VS Code.
+2. Open Terminal.
+3. Run:
+   python -m venv .venv
+   .\.venv\Scripts\Activate.ps1
+   pip install -r requirements.txt
+4. Copy .env.example to .env.
+5. Put your Gemini API key in .env:
+   GEMINI_API_KEY=your_key_here
+6. Run:
+   uvicorn main:app --reload
+7. Open:
+   http://127.0.0.1:8000
+
+No API key? You can still test the complete UI and endpoints in demo/offline mode.
+Run tests with:
+   pytest -q
